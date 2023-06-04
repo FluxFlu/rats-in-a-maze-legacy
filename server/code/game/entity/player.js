@@ -155,7 +155,7 @@ class Player extends Entity {
         new TutorialNpc(tutorial, -4, -4, "scarecrow", "This game uses a\nmovement queue system.\nEach time you press a movement key,\nthe game adds that key to a list,\nand every .1 seconds,\n it removes a movement from that\nlist and enacts it.\n\nPressing shift empties the list.\n\nTry holding down the D key\nto see what I mean.")
 
 
-        new TutorialNpc(tutorial, -4, -8, "scarecrow", "Press I to open your inventory.\nYou can use [] to move the cursor\nand {} to move 5 at a time.")
+        new TutorialNpc(tutorial, -4, -8, "scarecrow", "Press I to open your inventory.\nYou can use [] to move the cursor\nand {} to move 5 at a time.\nYou can use the inventory controls\neven when the menu is closed.")
 
 
         new TutorialNpc(tutorial, -4, -12, "scarecrow", "The cheese has a green background\nwhile the match has blue.\nAny item with a blue background\nis an equippable and any\nother item is a consumable.")
@@ -169,10 +169,20 @@ class Player extends Entity {
 
         new TutorialNpc(tutorial, -4, -24, "scarecrow", "You can use the arrow keys\nto change direction.\nTry facing upwards,\nequipping the match, and\npressing Q to burn these blocks away.\n")
 
+        new ItemEntity(tutorial, 4, -26, new Item(this, "fire_staff", "Match\nDeals 10 damage.").addSpell(function (player) {
+            const x = player.getDirectionVector().x;
+            const y = player.getDirectionVector().y;
+            new Projectile(player.world, player, [player], player.x, player.y, "#cd0000", false)
+                .setTickAbility(function () { this.x += x; this.y += y })
+                .setAbility(function (entity) { this.hit(entity, 10) })
+                .setDiesOnCollide()
+        }, 10, 4));
+
         for (let x = -4; x < 5; x++) {
             new Animal(tutorial, x, -26, "#cdcdcd", true, doNothing(), 10, 0, 0, [], []);
         }
 
+        new TutorialNpc(tutorial, 4, -28, "scarecrow", "Press P to pick up items.\nTry picking up the item dropped\nby the block below me.")
 
         new TutorialNpc(tutorial, -4, -28, "scarecrow", "Press ,. to move items\n to the left and right,\nand - to delete items.")
 
