@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rats in a maze</title>
+    <link rel = "stylesheet" type = "text/css" href = "./client/style/style.css" />
+</head>
+
+<body id = "body">
+    
+    <img id = "player_left" src = "./client/assets/player_left.png"/>
+    <img id = "player_right" src = "./client/assets/player_right.png"/>
+    <img id = "player_up" src = "./client/assets/player_up.png"/>
+    <img id = "player_down" src = "./client/assets/player_down.png"/>
+
+    <img id = "fire_staff" src = "./client/assets/fire_staff.png"/>
+    
+    <img id = "cheese" src = "./client/assets/cheese.png"/>
+    
+    <img id = "stone_key" src = "./client/assets/stone_key.png"/>
+    
+    <!-- Maze Basic -->
+    
+    <img id = "spider_carcass" src = "./client/assets/spider_carcass.png"/>
+    <img id = "pitchforked_tongue" src = "./client/assets/pitchforked_tongue.png"/>
+    <img id = "baby_monkey_carcass" src = "./client/assets/baby_monkey_carcass.png"/>
+    
+    <img id = "fruit_flies" src = "./client/assets/fruit_flies.png"/>
+    
+    <img id = "bone_staff" src = "./client/assets/bone_staff.png"/>
+    <img id = "spider_slayer" src = "./client/assets/spider_slayer.png"/>
+    <img id = "heart_grimoire" src = "./client/assets/heart_grimoire.png"/>
+    
+    <img id = "milk_bottle" src = "./client/assets/milk_bottle.png"/>
+    <img id = "skeleton_heart" src = "./client/assets/skeleton_heart.png"/>
+    <img id = "spider_heart" src = "./client/assets/spider_heart.png"/>
+    
+    <img id = "green_totem" src = "./client/assets/green_totem.png"/>
+    <img id = "green_key" src = "./client/assets/green_key.png"/>
+    
+    <img id = "spider" src = "./client/assets/spider.png"/>
+    <img id = "skeleton" src = "./client/assets/skeleton.png"/>
+    <img id = "baby_monkey" src = "./client/assets/baby_monkey.png"/>
+    <img id = "spider_necromancer" src = "./client/assets/spider_necromancer.png"/>
+    <img id = "snake" src = "./client/assets/snake.png"/>
+    <img id = "green_cultist" src = "./client/assets/green_cultist.png"/>
+    <img id = "green_green_grass_of_home" src = "./client/assets/green_green_grass_of_home.png"/>
+
+    <img id = "wire_mother" src = "./client/assets/wire_mother.png"/>
+    <img id = "scarecrow" src = "./client/assets/scarecrow.png"/>
+    
+    <img id = "wheat" src = "./client/assets/wheat.png"/>
+    
+    <!-- Deserted Cells -->
+    
+    <img id = "wolf_fang" src = "./client/assets/wolf_fang.png"/>
+    
+    <img id = "wolf_carcass" src = "./client/assets/wolf_carcass.png"/>
+    
+    <img id = "wolf" src = "./client/assets/wolf.png"/>
+    
+    
+    <div>
+        <canvas id = "mainCanvas" width = "650" height = "650"></canvas>
+    </div>
+    <script src = "./socket.mjs"></script>
+    
+    <script src = "./server/code/game/keyManager.js"></script>
+    
+    <script src = "./server/code/game/ability/abilityType.js"></script>
+    <script src = "./server/code/game/ability.js"></script>
+    
+    <script src = "./server/code/game/spell.js"></script>
+    
+    <script src = "./server/code/game/item.js"></script>
+    <script src = "./server/code/game/item/consumable.js"></script>
+    <script src = "./server/code/game/item/bossItem.js"></script>
+    
+    <script src = "./server/code/game/entity.js"></script>
+    <script src = "./server/code/game/entity/projectile.js"></script>
+    <script src = "./server/code/game/entity/player.js"></script>
+    <script src = "./server/code/game/entity/animal.js"></script>
+    <script src = "./server/code/game/entity/block.js"></script>
+    <script src = "./server/code/game/entity/itemEntity.js"></script>
+    
+    <script src = "./server/code/game/entity/AI.js"></script>
+    <script src = "./server/code/game/entity/genericAI/doNothing.js"></script>
+    <script src = "./server/code/game/entity/genericAI/meleeFollow.js"></script>
+    <script src = "./server/code/game/entity/genericAI/throughBlocks.js"></script>
+    
+    <script src = "./server/code/game/entity/npc.js"></script>
+    <script src = "./server/code/game/entity/tutorialNpc.js"></script>
+    <script src = "./server/code/game/entity/npc/quest.js"></script>
+    
+    <script src = "./server/code/game/structure.js"></script>
+    
+    <script src = "./server/code/game/structureGeneric/maze_basic/spider.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/skeleton.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/spider_necromancer.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/snake.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/fruit_flies.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/green_cultist.js"></script>
+
+    <script src = "./server/code/game/structureGeneric/maze_basic/wire_mother.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/scarecrow.js"></script>
+    <script src = "./server/code/game/structureGeneric/maze_basic/snake_eater.js"></script>
+    
+    <script src = "./server/code/game/structureGeneric/deserted_cells/wolf.js"></script>
+    
+    <script src = "./server/code/game/world.js"></script>
+    
+    <script src = "./server/code/game.js"></script>
+    <script src = "./server/server.js"></script>
+    
+    <script src = "./client/script/script.mjs"></script>
+</body>
+
+</html>
