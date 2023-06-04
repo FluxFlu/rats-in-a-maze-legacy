@@ -167,9 +167,9 @@ class Player extends Entity {
         new TutorialNpc(tutorial, -4, -20, "scarecrow", "You can cast spells using the keys:\n`QE RFTCYGHVZXBN` in that order.")
 
 
-        new TutorialNpc(tutorial, -4, -24, "scarecrow", "You can use the arrow keys\nto change direction.\nTry facing upwards,\nequipping the match, and\npressing Q to burn these blocks away.\n")
+        let man = new TutorialNpc(tutorial, -4, -24, "scarecrow", "You can use the arrow keys\nto change direction.\nTry facing upwards,\nequipping the match, and\npressing Q to burn these blocks away.\n")
 
-        new ItemEntity(tutorial, 4, -26, new Item(this, "fire_staff", "Match\nDeals 10 damage.").addSpell(function (player) {
+        new ItemEntity(tutorial, 4, -26, new Item(man, "fire_staff", "Match\nDeals 10 damage.").addSpell(function (player) {
             const x = player.getDirectionVector().x;
             const y = player.getDirectionVector().y;
             new Projectile(player.world, player, [player], player.x, player.y, "#cd0000", false)
