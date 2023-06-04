@@ -259,6 +259,10 @@ class Player extends Entity {
     }
     loseHealth(amount) {
         this.health -= amount;
+        if (this.health <= 0) {
+            this.movingToWorld = { desc: "", name: "You died.", avoid_have_entered: true };
+            // window.location.reload();
+        }
         return true;
     }
     takeDamage(source, amount) {

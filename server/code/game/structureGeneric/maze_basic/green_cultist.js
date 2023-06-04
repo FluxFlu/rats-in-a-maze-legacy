@@ -12,7 +12,8 @@ new Structure("maze_basic", 1, 1, 24000, [
             new Animal(world, 0, -13, "green_green_grass_of_home", true, meleeFollow(5, 1).setAnimal(this), 900, 70, 16, [
                 new BossItem(this, "green_key", "There is a note\nattached to the key.\n\n\"You'll be alone without me...\"\n\"Nothing to live for...\"\n\n\"Good luck, scarecrow!\"", function () {
                     //this.player.moveToWorld("deserted_cells", PLAYER_SPREAD)
-                    alert("You win! Check back later for more content, pilgrim!");
+                    // alert("You win! Check back later for more content, pilgrim!");
+                    this.movingToWorld = { desc: "Check back later for more content, pilgrim.", name: "You win!", avoid_have_entered: true };
                 })
             ],
                 [1]

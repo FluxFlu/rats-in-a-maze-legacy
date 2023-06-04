@@ -41,7 +41,7 @@ io.on("gameupdate", (layers, inv, playerData) => {
             for (i in str)
                 ctx.fillText(str[i], 330, i * 25 + 120);
             ctx.font = "bold 135% serif";
-            ctx.fillText('You have entered ' + playerData.movingToWorld.name, 330, 200 + i * 25)
+            ctx.fillText((playerData.movingToWorld.avoid_have_entered ? "" : 'You have entered ') + playerData.movingToWorld.name, 330, 200 + i * 25)
         return;
     }
     inventory = inv[0];
