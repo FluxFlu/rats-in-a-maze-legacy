@@ -4,7 +4,8 @@ new Structure("maze_basic", 1, 1, 24000, [
     (world, x, y) => new Animal(world, x, y, "green_cultist", true, meleeFollow(5, 1).setAnimal(this), 500, 40, 15, [
         new BossItem(this, "green_totem", "A totem to the god\n\"Green Green Grass of Home\"", function () {
             this.player.y = this.player.x = 0;
-            world = new World(this.player.world.game, "GGGH_" + this.player.name, "Green Green Grass of Home", "The totem disappears from your hand as the world around you grows to be warm and kind.", "#222");
+            world = new World(this.player.world.game, "GGGH_" + this.player.name, "Green Green Grass of Home", "The totem disappears from your hand as the world around you grows to be warm and kind.", "#222")
+                        .setOption("backgroundColor", "#2a2a2a");
             this.player.moveToWorld("GGGH_" + this.player.name);
             
             this.player.untilMoveText = "You're just a scarecrow with\nno spikes and no field of wheat.";
@@ -13,7 +14,7 @@ new Structure("maze_basic", 1, 1, 24000, [
                 new BossItem(this, "green_key", "There is a note\nattached to the key.\n\n\"You'll be alone without me...\"\n\"Nothing to live for...\"\n\n\"Good luck, scarecrow!\"", function () {
                     //this.player.moveToWorld("deserted_cells", PLAYER_SPREAD)
                     // alert("You win! Check back later for more content, pilgrim!");
-                    this.movingToWorld = { desc: "Check back later for more content, pilgrim.", name: "You win!", avoid_have_entered: true };
+                    this.player.movingToWorld = { desc: "Check back later for more content, pilgrim.", name: "You win!", avoid_have_entered: true };
                 })
             ],
                 [1]
