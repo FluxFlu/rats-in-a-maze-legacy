@@ -1,4 +1,4 @@
-# Rats in a Maze
+# Rats in a Maze LEGACY
 
 A browser-based dungeon-crawling roguelike that kills you with a stick and pokes you with it for a few hours for fun and then puts your head up on a pike.
 
